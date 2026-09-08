@@ -1,13 +1,13 @@
 {
   "name": "@deepseek-ai/dsh-session-title-llm",
-  "description": "Shared LLM generation policy for DeepSeek Harness session-title providers",
+  "description": "Shared LLM generation policy for Xingyunxunzhi session-title providers",
   "version": "0.1.3-alpha.2",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deepseek-ai/deepseek-harness.git",
+    "url": "git+https://github.com/xingyunxunzhi/xingyunxunzhi-harness.git",
     "directory": "packages/session/session-title-llm"
   },
   "type": "module",

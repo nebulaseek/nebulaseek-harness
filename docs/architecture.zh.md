@@ -1,4 +1,4 @@
-# DeepSeek Harness 架构
+# 星云寻知架构
 
 [English](architecture.md) | 中文
 

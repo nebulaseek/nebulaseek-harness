@@ -6,6 +6,6 @@ head:
       content: 0; url=./guide/quickstart
 ---
 
-# DeepSeek Harness
+# 星云寻知
 
 [English](index.md) | 中文

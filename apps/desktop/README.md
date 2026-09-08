@@ -1,4 +1,4 @@
-# DeepSeek Harness Desktop
+# Xingyunxunzhi Desktop
 
 English | [中文](README.zh.md)
 

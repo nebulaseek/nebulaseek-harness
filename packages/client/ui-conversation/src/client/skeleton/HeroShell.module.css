@@ -1,4 +1,4 @@
-/* NEW SESSION hero (figma Input_Bottom 75:8208): fish + title, workspace chip
+/* NEW SESSION hero (figma Input_Bottom 75:8208): brand mark + title, workspace chip
    above the shared InputBar card. The input itself is InputBar — only stack
    geometry and the chip live here. */
 
@@ -23,7 +23,7 @@
   overflow: visible;
 }
 
-/* figma 34:10411: fish + title, gap 10, centered; 26/32 wt500. The preview
+/* figma 34:10411: brand mark + title, gap 10, centered; 26/32 wt500. The preview
    badge is a product addition outside that source: a mono superscript pill
    riding the title's top-right. */
 .headline {
@@ -62,8 +62,8 @@
 }
 
 /* Keep hover detection on a stationary box while the mark moves within it;
-   hover rules target the hitbox so a slot-occupant mark swims too. */
-.fishHitbox {
+   hover rules target the hitbox so a slot-occupant mark floats too. */
+.markHitbox {
   grid-row: 1;
   grid-column: 1;
   display: inline-flex;
@@ -71,21 +71,20 @@
   justify-content: center;
 }
 
-/* The swim morph's curves poke slightly past the viewBox edges, so clipping
-   would slice the tail mid-wag. The hero mark stays in the same primary ink
-   as its headline. */
-.fish {
+/* The float can carry the artwork slightly past the viewBox edges, so
+   clipping would shave it mid-rise. A slot occupant that rides currentColor
+   stays in the same primary ink as its headline. */
+.mark {
   display: block;
   overflow: visible;
   transform-origin: 50% 60%;
   color: var(--dsw-alias-label-primary);
 }
 
-/* Hover swim: a slow continuous sway about the body center — the head
-   (left) lifts as the whale rises, then settles back with a small
-   counter-tilt, like treading water. Negative rotation = head up (the head
-   is the left half; origin 50% 60%). */
-@keyframes hero-fish-swim {
+/* Hover float: a slow continuous sway about the mark's center — it lifts
+   with a small tilt, then settles back with a counter-tilt, like drifting.
+   Negative rotation = leading edge up (origin 50% 60%). */
+@keyframes hero-mark-float {
   0%,
   100% {
     transform: none;
@@ -101,8 +100,8 @@
 }
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .fishHitbox:hover .fish {
-    animation: hero-fish-swim 1.6s ease-in-out infinite;
+  .markHitbox:hover .mark {
+    animation: hero-mark-float 1.6s ease-in-out infinite;
   }
 }
 

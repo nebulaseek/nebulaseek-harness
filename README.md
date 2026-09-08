@@ -1,16 +1,16 @@
-# DeepSeek Harness
+# Xingyunxunzhi
 
 English | [中文](README.zh.md)
 
-DeepSeek Harness (`dsh`) is an open-source agent harness developed by [DeepSeek AI](https://deepseek.com).
+Xingyunxunzhi (`dsh`) is an open-source agent core. It is a downstream distribution of [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) by [DeepSeek AI](https://deepseek.com), used under the MIT License; this project is not affiliated with or endorsed by DeepSeek. See the [brand guidelines](BRAND_GUIDELINES.md).
 
 It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).
 
-Documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/)
+Documentation: [https://xingyunxunzhi.github.io/xingyunxunzhi-harness/](https://xingyunxunzhi.github.io/xingyunxunzhi-harness/)
 
 ## Developer preview
 
-DeepSeek Harness is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
+Xingyunxunzhi is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
 
 Review the [safety notice](SAFETY.md) before running the project.
 
@@ -31,8 +31,8 @@ The command starts the Web UI at `http://127.0.0.1:3080` by default and opens it
 To run from a repository checkout:
 
 ```sh
-git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
+git clone https://github.com/xingyunxunzhi/xingyunxunzhi-harness.git
+cd xingyunxunzhi-harness
 pnpm install
 pnpm run build
 pnpm dsh web
@@ -42,9 +42,8 @@ pnpm dsh web
 
 ## Community and support
 
-- Submit feedback or bug reports through [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions).
+- Submit feedback or bug reports through [GitHub Discussions](https://github.com/xingyunxunzhi/xingyunxunzhi-harness/discussions).
 - Add the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic to your plugin repository for discoverability.
-- Join <a href="https://discord.gg/Ycq5dCaS4">DeepSeek Harness Discord community</a>.
 
 ## Contributing
 

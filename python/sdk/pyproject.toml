@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "deepseek-harness-sdk"
 version = "0.0.0.dev0"
-description = "Python SDK for DeepSeek Harness"
+description = "Python SDK for Xingyunxunzhi"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -16,10 +16,10 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/deepseek-ai/deepseek-harness"
-Documentation = "https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/guide/python-sdk.md"
-Issues = "https://github.com/deepseek-ai/deepseek-harness/issues"
-Source = "https://github.com/deepseek-ai/deepseek-harness"
+Homepage = "https://github.com/xingyunxunzhi/xingyunxunzhi-harness"
+Documentation = "https://github.com/xingyunxunzhi/xingyunxunzhi-harness/blob/master/docs/user/guide/python-sdk.md"
+Issues = "https://github.com/xingyunxunzhi/xingyunxunzhi-harness/issues"
+Source = "https://github.com/xingyunxunzhi/xingyunxunzhi-harness"
 
 [dependency-groups]
 test = ["pytest>=8.0"]
