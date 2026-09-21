@@ -1,8 +1,8 @@
-# DeepSeek Harness
+# XingYunXunZhi Harness
 
 English | [中文](README.zh.md)
 
-DeepSeek Harness (`dsh`) is an open-source agent harness developed by [DeepSeek AI](https://deepseek.com).
+XingYunXunZhi Harness (`dsh`) is the XingYunXunZhi distribution of the open-source [DeepSeek Harness](https://github.com/deepseek-desktop/deepseek-harness). It tracks that community upstream and limits downstream changes to user-visible branding.
 
 It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).
 
@@ -10,7 +10,7 @@ Documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://de
 
 ## Developer preview
 
-DeepSeek Harness is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
+XingYunXunZhi Harness is in _developer preview_ and follows an upstream that iterates rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
 
 Review the [safety notice](SAFETY.md) before running the project.
 
@@ -31,8 +31,8 @@ The command starts the Web UI at `http://127.0.0.1:3080` by default and opens it
 To run from a repository checkout:
 
 ```sh
-git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
+git clone https://github.com/xingyunxunzhi/xingyunxunzhi-harness.git
+cd xingyunxunzhi-harness
 pnpm install
 pnpm run build
 pnpm dsh web

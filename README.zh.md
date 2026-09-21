@@ -1,8 +1,8 @@
-# DeepSeek Harness
+# 星云寻知 Harness
 
 [English](README.md) | 中文
 
-DeepSeek Harness（`dsh`）是由 [DeepSeek AI](https://deepseek.com) 开发的开源 agent harness（智能体框架）。
+星云寻知 Harness（`dsh`）是开源 [DeepSeek Harness](https://github.com/deepseek-desktop/deepseek-harness) 的星云寻知发行版。本项目持续跟随社区上游，下游改动仅限用户可见品牌。
 
 它构建于**一切皆插件**的架构之上，由 [Cordis](https://github.com/cordiverse/cordis) 驱动，其设计参见论文 [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512)。
 
@@ -10,7 +10,7 @@ DeepSeek Harness（`dsh`）是由 [DeepSeek AI](https://deepseek.com) 开发的�
 
 ## 开发者预览
 
-DeepSeek Harness 处于 _开发者预览_ 阶段，正在快速迭代。**未来将出现破坏兼容性的变更。**
+星云寻知 Harness 处于 _开发者预览_ 阶段，并跟随快速迭代的社区上游。**未来将出现破坏兼容性的变更。**
 
 运行本项目前，请阅读[安全说明](SAFETY.zh.md)。
 
@@ -35,8 +35,8 @@ npx @deepseek-ai/dsh web
 如需从仓库源码运行：
 
 ```sh
-git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
+git clone https://github.com/xingyunxunzhi/xingyunxunzhi-harness.git
+cd xingyunxunzhi-harness
 pnpm install
 pnpm run build
 pnpm dsh web
