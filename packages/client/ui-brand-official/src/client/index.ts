@@ -9,16 +9,17 @@ import { OfficialBrandMark, OfficialBrandName } from './Brand.tsx'
 export const inject = ['slots']
 
 /**
- * Fill the sidebar brand slots as one declaration-aware registration set. The
- * conversation hero uses the same downstream mark as the sidebar.
+ * Fill each brand slot against its own declaration lifetime. The conversation
+ * hero can be declared later than the sidebar, so it must not share the
+ * sidebar registration effect.
  * @param ctx - Client root context.
  */
 export function apply(ctx: ClientContext): void {
   if (process.env.DSH_CLIENT_BUILD_PROFILE !== 'official') return
   ctx.slots.inject('sidebar.brand.mark', () =>
-    ctx.slots.inject('sidebar.brand.name', function* () {
-      yield ctx.slots.register({ name: 'sidebar.brand.mark' }, OfficialBrandMark)
-      yield ctx.slots.register({ name: 'sidebar.brand.name' }, OfficialBrandName)
-      yield ctx.slots.register({ name: 'conversation.hero.brand.mark' }, OfficialBrandMark)
-    }))
+    ctx.slots.register({ name: 'sidebar.brand.mark' }, OfficialBrandMark))
+  ctx.slots.inject('sidebar.brand.name', () =>
+    ctx.slots.register({ name: 'sidebar.brand.name' }, OfficialBrandName))
+  ctx.slots.inject('conversation.hero.brand.mark', () =>
+    ctx.slots.register({ name: 'conversation.hero.brand.mark' }, OfficialBrandMark))
 }

@@ -30,6 +30,28 @@ async function bench(declare = true) {
   return { ctx, slots, declareHoles, disposeHoles }
 }
 
+async function splitBench() {
+  const ctx = new Context()
+  await ctx.plugin(SlotRegistry).await()
+  const slots = ctx.get('slots') as SlotRegistry
+  const disposeRoot = slots.register({
+    name: 'root',
+    children: {
+      'test.sidebar': { kind: 'single', scope: 'root' },
+      'test.conversation': { kind: 'single', scope: 'root' },
+    },
+  } as never, () => null)
+  const declareSidebar = () => slots.register({
+    name: 'test.sidebar',
+    children: Object.fromEntries(HOLES.slice(0, 2).map(name => [name, { kind: 'single', scope: 'root' }])),
+  } as never, () => null)
+  const declareConversation = () => slots.register({
+    name: 'test.conversation',
+    children: { 'conversation.hero.brand.mark': { kind: 'single', scope: 'root' } },
+  } as never, () => null)
+  return { ctx, slots, declareSidebar, declareConversation, disposeRoot }
+}
+
 describe('official browser-brand plugin', () => {
   it('keeps the host Loader entry inert', () => {
     expect(hostApply).not.toThrow()
@@ -68,6 +90,32 @@ describe('official browser-brand plugin', () => {
     after.declareHoles()
     await Promise.resolve()
     for (const hole of HOLES) expect(after.slots.entries(hole)).toHaveLength(1)
+  })
+
+  it('waits for the independently declared conversation hero slot', async () => {
+    vi.stubEnv('DSH_CLIENT_BUILD_PROFILE', 'official')
+    const subject = await splitBench()
+    const disposeSidebar = subject.declareSidebar()
+    const fiber = subject.ctx.plugin({ inject: [...inject], apply })
+    await fiber.await()
+
+    expect(subject.slots.entries('sidebar.brand.mark')).toHaveLength(1)
+    expect(subject.slots.entries('sidebar.brand.name')).toHaveLength(1)
+    expect(subject.slots.entries('conversation.hero.brand.mark')).toHaveLength(0)
+
+    const disposeConversation = subject.declareConversation()
+    await Promise.resolve()
+    expect(subject.slots.entries('conversation.hero.brand.mark')).toHaveLength(1)
+
+    disposeSidebar()
+    expect(subject.slots.entries('sidebar.brand.mark')).toHaveLength(0)
+    expect(subject.slots.entries('sidebar.brand.name')).toHaveLength(0)
+    expect(subject.slots.entries('conversation.hero.brand.mark')).toHaveLength(1)
+
+    disposeConversation()
+    expect(subject.slots.entries('conversation.hero.brand.mark')).toHaveLength(0)
+    await fiber.dispose()
+    subject.disposeRoot()
   })
 
   it('renders the official name independently from both requested mark sizes', () => {
