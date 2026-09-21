@@ -1,8 +1,10 @@
-# XingYunXunZhi Harness
+# NebulaSeek（星云寻知） Harness
 
 English | [中文](README.zh.md)
 
-XingYunXunZhi Harness (`dsh`) is the XingYunXunZhi distribution of the open-source [DeepSeek Harness](https://github.com/deepseek-desktop/deepseek-harness). It tracks that community upstream and limits downstream changes to user-visible branding.
+NebulaSeek（星云寻知） Harness (`dsh`) is the dedicated edition built by the team that maintains the open-source [DeepSeek Harness community edition](https://github.com/deepseek-desktop/deepseek-harness). It stays aligned with that community codebase and limits edition-specific changes to user-visible branding.
+
+The community edition serves general users. NebulaSeek（星云寻知） is the customer-focused edition, with its own name, copy, imagery, and release channel while retaining the same runtime contracts.
 
 It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).
 
@@ -10,7 +12,7 @@ Documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://de
 
 ## Developer preview
 
-XingYunXunZhi Harness is in _developer preview_ and follows an upstream that iterates rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
+NebulaSeek（星云寻知） Harness is in _developer preview_ and follows an upstream that iterates rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
 
 Review the [safety notice](SAFETY.md) before running the project.
 
@@ -31,8 +33,8 @@ The command starts the Web UI at `http://127.0.0.1:3080` by default and opens it
 To run from a repository checkout:
 
 ```sh
-git clone https://github.com/xingyunxunzhi/xingyunxunzhi-harness.git
-cd xingyunxunzhi-harness
+git clone https://github.com/nebulaseek/nebulaseek-harness.git
+cd nebulaseek-harness
 pnpm install
 pnpm run build
 pnpm dsh web

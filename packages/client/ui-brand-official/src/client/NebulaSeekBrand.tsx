@@ -8,8 +8,8 @@ interface BrandMarkProps {
   className?: string | undefined
 }
 
-/** Render the XingYunXunZhi cloud mark without changing upstream primitive APIs. */
-export function XingYunXunZhiBrandMark({ size, className }: BrandMarkProps) {
+/** Render the NebulaSeek cloud mark without changing upstream primitive APIs. */
+export function NebulaSeekBrandMark({ size, className }: BrandMarkProps) {
   const cloudGradientId = useId()
   const sparkGradientId = useId()
   return (
@@ -32,11 +32,12 @@ export function XingYunXunZhiBrandMark({ size, className }: BrandMarkProps) {
   )
 }
 
-/** Render the Chinese brand wordmark used by the official downstream build. */
-export function XingYunXunZhiBrandName() {
+/** Render the bilingual brand wordmark used by the dedicated edition. */
+export function NebulaSeekBrandName() {
   return (
-    <svg width="78" height="24" viewBox="0 0 78 24" fill="none" aria-hidden="true">
-      <text x="0" y="17.5" fontSize="17" fontWeight="600" letterSpacing="0.5" fill="currentColor">星云寻知</text>
+    <svg width="96" height="32" viewBox="0 0 96 32" fill="none" aria-hidden="true">
+      <text x="0" y="14" fontSize="14" fontWeight="700" letterSpacing="0.4" fill="currentColor">NebulaSeek</text>
+      <text x="0" y="28" fontSize="11" fontWeight="500" letterSpacing="1.2" fill="currentColor">星云寻知</text>
     </svg>
   )
 }

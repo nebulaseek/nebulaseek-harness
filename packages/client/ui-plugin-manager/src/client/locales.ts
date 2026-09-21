@@ -233,7 +233,7 @@ export const en = {
   installGuideExampleLabel: 'Example: ',
   installGuideFill: 'Use example',
   installGuideFillAria: 'Use the example {example}',
-  installGuideSafety: 'Install only plugins you trust: they run with your permissions and can damage XingYunXunZhi Harness or leak your data.',
+  installGuideSafety: 'Install only plugins you trust: they run with your permissions and can damage NebulaSeek（星云寻知） Harness or leak your data.',
   installRun: 'Install',
   installChecking: 'Checking…',
   installProblemInvalid: 'This is not a package name or address that can be installed: {reason}',

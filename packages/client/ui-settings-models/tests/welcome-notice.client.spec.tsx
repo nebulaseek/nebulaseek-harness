@@ -107,7 +107,7 @@ describe('WelcomeNotice', () => {
   it('uses the exact owner copy in both GUI locales', () => {
     expect(WELCOME_NOTICE_COPY.en).toEqual({
       title: 'Internal Testing Notice',
-      body: "XingYunXunZhi Harness 0.1 remains in testing for Harness developers. It follows the DeepSeek Harness community upstream and keeps downstream changes limited to visible branding. Core plugins and foundational APIs will continue to evolve rapidly with upstream.\n\nWe look forward to exploring the limits of intelligence with developers around the world, building on open-source, open, reusable, and composable infrastructure. We welcome Harness developers everywhere to join the DSH plugin ecosystem.",
+      body: 'NebulaSeek（星云寻知） Harness 0.1 is a dedicated customer edition built by the team that maintains the DeepSeek Harness community edition. It stays aligned with the community runtime and limits edition-specific changes to visible branding. Core plugins and foundational APIs will continue to evolve rapidly with the community edition.\n\nWe look forward to exploring the limits of intelligence with developers around the world, building on open-source, open, reusable, and composable infrastructure. We welcome Harness developers everywhere to join the DSH plugin ecosystem.',
       continueLabel: 'Continue',
     })
     expect(en.welcomeBody).toBe(WELCOME_NOTICE_COPY.en.body)

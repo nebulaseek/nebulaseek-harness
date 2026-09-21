@@ -1,5 +1,5 @@
 import type { SidebarBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-sidebar/client'
-import { XingYunXunZhiBrandMark, XingYunXunZhiBrandName } from './XingYunXunZhiBrand.tsx'
+import { NebulaSeekBrandMark, NebulaSeekBrandName } from './NebulaSeekBrand.tsx'
 
 /**
  * Render the official mark with the presentation requested by its host surface.
@@ -7,7 +7,7 @@ import { XingYunXunZhiBrandMark, XingYunXunZhiBrandName } from './XingYunXunZhiB
  * @returns the official whale mark.
  */
 export function OfficialBrandMark({ size, className }: SidebarBrandMarkOwnerProps & { className?: string | undefined }) {
-  return <XingYunXunZhiBrandMark size={size} className={className} />
+  return <NebulaSeekBrandMark size={size} className={className} />
 }
 
 /**
@@ -15,5 +15,5 @@ export function OfficialBrandMark({ size, className }: SidebarBrandMarkOwnerProp
  * @returns the official name wordmark.
  */
 export function OfficialBrandName() {
-  return <XingYunXunZhiBrandName />
+  return <NebulaSeekBrandName />
 }

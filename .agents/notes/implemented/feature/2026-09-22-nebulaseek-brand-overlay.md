@@ -1,25 +1,25 @@
-# Agent Note: XingYunXunZhi brand overlay
+# Agent Note: NebulaSeek brand overlay
 
 Status: implemented
 
-English | [中文](2026-09-22-xingyunxunzhi-brand-overlay.zh.md)
+English | [中文](2026-09-22-nebulaseek-brand-overlay.zh.md)
 
 ## Problem
 
-This distribution must present XingYunXunZhi branding while continuing to take community DeepSeek Harness updates with little conflict. Renaming package scopes, environment variables, commands, persisted identifiers, or plugin contracts would turn a presentation change into a permanent fork of upstream runtime behavior.
+This distribution must present NebulaSeek branding while continuing to take community DeepSeek Harness updates with little conflict. Renaming package scopes, environment variables, commands, persisted identifiers, or plugin contracts would turn a presentation change into a permanent fork of upstream runtime behavior.
 
 ## Decision
 
 Keep community code and technical contracts intact. Apply the downstream identity only to shipped user-facing surfaces: the sidebar and conversation hero, browser metadata, desktop application and installer text, icons, the CLI description, onboarding and error copy, and the public repository README.
 
-The English product name is `XingYunXunZhi Harness`; Simplified Chinese uses `星云寻知`. The command remains `dsh`, package scopes remain `@deepseek-ai/*`, environment variables remain `DSH_*`, and upstream plugin, storage, protocol, and service identifiers remain unchanged. References to the DeepSeek model or to the community upstream also remain DeepSeek references.
+The English product name is `NebulaSeek（星云寻知） Harness`; Simplified Chinese uses `星云寻知`. The command remains `dsh`, package scopes remain `@deepseek-ai/*`, environment variables remain `DSH_*`, and upstream plugin, storage, protocol, and service identifiers remain unchanged. References to the DeepSeek model or to the community upstream also remain DeepSeek references.
 
 Brand assets keep their upstream filenames when the filename is an internal build input. The official brand plugin owns the sidebar and conversation hero marks, so generic UI packages need no downstream changes.
 
 ## Upstream sync workflow
 
 1. Fetch the community remote and reset or rebase the downstream branch onto the selected upstream commit.
-2. Reapply the single XingYunXunZhi branding commit. Resolve conflicts only in the documented presentation surfaces.
+2. Reapply the single NebulaSeek branding commit. Resolve conflicts only in the documented presentation surfaces.
 3. Review the diff for changes outside those surfaces and remove accidental internal renames.
 4. Run the focused brand, locale, packaging, type, and documentation checks before publishing the downstream commit.
 
@@ -33,7 +33,7 @@ Brand assets keep their upstream filenames when the filename is an internal buil
 
 ## Consequences
 
-Users see XingYunXunZhi throughout the distributed application, while plugins and integrations continue to use upstream contracts. Future syncs should normally touch only this overlay and any newly added user-facing upstream surface. If upstream changes a technical identifier, adopt it as an upstream migration rather than as part of branding.
+Users see NebulaSeek throughout the distributed application, while plugins and integrations continue to use upstream contracts. Future syncs should normally touch only this overlay and any newly added user-facing upstream surface. If upstream changes a technical identifier, adopt it as an upstream migration rather than as part of branding.
 
 ## Testing
 

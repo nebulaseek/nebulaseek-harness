@@ -1,8 +1,8 @@
-# Agent Note：星云寻知品牌覆盖层
+# Agent Note：NebulaSeek（星云寻知）品牌覆盖层
 
 状态：已实施
 
-[English](2026-09-22-xingyunxunzhi-brand-overlay.md) | 中文
+[English](2026-09-22-nebulaseek-brand-overlay.md) | 中文
 
 ## 问题
 
@@ -12,7 +12,7 @@
 
 保留社区代码和技术契约，仅在实际交付的用户可见界面应用下游品牌：侧边栏和会话首页、浏览器元数据、桌面应用及安装器文案、图标、CLI 描述、引导和错误文案，以及公开仓库 README。
 
-英文产品名为 `XingYunXunZhi Harness`，简体中文使用 `星云寻知`。命令仍为 `dsh`，包作用域仍为 `@deepseek-ai/*`，环境变量仍为 `DSH_*`，上游插件、存储、协议和服务标识保持不变。DeepSeek 模型名称和社区上游名称也继续使用 DeepSeek。
+英文产品名为 `NebulaSeek（星云寻知） Harness`，简体中文使用 `星云寻知`。命令仍为 `dsh`，包作用域仍为 `@deepseek-ai/*`，环境变量仍为 `DSH_*`，上游插件、存储、协议和服务标识保持不变。DeepSeek 模型名称和社区上游名称也继续使用 DeepSeek。
 
 当资源文件名属于内部构建输入时，品牌资源保留上游文件名。官方品牌插件统一提供侧边栏和会话首页标识，通用 UI 包无需下游修改。
 

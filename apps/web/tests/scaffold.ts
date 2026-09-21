@@ -114,7 +114,7 @@ export const WELCOME_NOTICE_VERSION = '2026-08-13.1'
 export const WELCOME_NOTICE_COPY = {
   zh: {
     title: '内测声明',
-    body: '星云寻知 0.1 目前仍处在面向 Harness 开发者的测试阶段。本项目跟随 DeepSeek Harness 社区上游，下游改动仅限用户可见品牌；核心插件与基础 API 将随上游持续快速演进。\n\n我们期待与全球开发者一起，在开源、开放、可复用、可组合的基础设施之上，共同探索智能上限。欢迎全球 Harness 开发者加入 DSH 插件生态。',
+    body: 'NebulaSeek（星云寻知） Harness 0.1 是由 DeepSeek Harness 社区版维护团队开发的客户专版。它与社区版运行时保持一致，专版差异仅限用户可见品牌；核心插件与基础 API 将随社区版持续快速演进。\n\n我们期待与全球开发者一起，在开源、开放、可复用、可组合的基础设施之上，共同探索智能上限。欢迎全球 Harness 开发者加入 DSH 插件生态。',
     continueLabel: '继续',
   },
 } as const

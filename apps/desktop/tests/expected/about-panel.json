@@ -1,11 +1,11 @@
 {
   "en-US": {
     "menu": [
-      { "label": "About XingYunXunZhi Harness", "role": "about" },
+      { "label": "About NebulaSeek（星云寻知） Harness", "role": "about" },
       { "type": "separator" }
     ],
     "options": {
-      "applicationName": "XingYunXunZhi Harness",
+      "applicationName": "NebulaSeek（星云寻知） Harness",
       "applicationVersion": "1.0.0",
       "version": "",
       "copyright": "",
@@ -18,7 +18,7 @@
       { "type": "separator" }
     ],
     "options": {
-      "applicationName": "XingYunXunZhi Harness",
+      "applicationName": "NebulaSeek（星云寻知） Harness",
       "applicationVersion": "1.0.0",
       "version": "",
       "copyright": "",

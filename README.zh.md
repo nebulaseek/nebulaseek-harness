@@ -1,8 +1,10 @@
-# 星云寻知 Harness
+# NebulaSeek（星云寻知） Harness
 
 [English](README.md) | 中文
 
-星云寻知 Harness（`dsh`）是开源 [DeepSeek Harness](https://github.com/deepseek-desktop/deepseek-harness) 的星云寻知发行版。本项目持续跟随社区上游，下游改动仅限用户可见品牌。
+NebulaSeek（星云寻知） Harness（`dsh`）由维护开源 [DeepSeek Harness 社区版](https://github.com/deepseek-desktop/deepseek-harness) 的同一团队开发，是面向客户的专版。它与社区版保持同一代码基线，专版差异仅限用户可见品牌。
+
+社区版面向大众用户，NebulaSeek（星云寻知）专版拥有独立的名称、文案、图片和发行渠道，同时保持相同的运行时契约。
 
 它构建于**一切皆插件**的架构之上，由 [Cordis](https://github.com/cordiverse/cordis) 驱动，其设计参见论文 [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512)。
 
@@ -10,7 +12,7 @@
 
 ## 开发者预览
 
-星云寻知 Harness 处于 _开发者预览_ 阶段，并跟随快速迭代的社区上游。**未来将出现破坏兼容性的变更。**
+NebulaSeek（星云寻知） Harness 处于 _开发者预览_ 阶段，并跟随快速迭代的社区版。**未来将出现破坏兼容性的变更。**
 
 运行本项目前，请阅读[安全说明](SAFETY.zh.md)。
 
@@ -35,8 +37,8 @@ npx @deepseek-ai/dsh web
 如需从仓库源码运行：
 
 ```sh
-git clone https://github.com/xingyunxunzhi/xingyunxunzhi-harness.git
-cd xingyunxunzhi-harness
+git clone https://github.com/nebulaseek/nebulaseek-harness.git
+cd nebulaseek-harness
 pnpm install
 pnpm run build
 pnpm dsh web
