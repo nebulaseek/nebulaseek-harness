@@ -108,7 +108,7 @@ const homeAndGuide = pairedPages([
   {
     source: 'docs/user/index.md',
     route: 'index.md',
-    label: { root: 'NebulaSeek（星云寻知） Harness', en: 'NebulaSeek（星云寻知） Harness' },
+    label: { root: 'NebulaSeek Harness', en: 'NebulaSeek Harness' },
     sidebar: { root: null, en: null },
     section: { root: '首页', en: 'Home' },
     order: 0,

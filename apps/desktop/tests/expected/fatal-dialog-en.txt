@@ -1,4 +1,4 @@
-NebulaSeek（星云寻知） Harness is unavailable
+NebulaSeek is unavailable
 The application could not start or stopped unexpectedly.
 Desktop Host failed
 Plugin initialization failed

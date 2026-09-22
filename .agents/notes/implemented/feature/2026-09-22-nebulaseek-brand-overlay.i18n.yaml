@@ -2,5 +2,5 @@
 # side as of the last confirmed-consistent state. Both languages carry equal authority;
 # after editing either side, bring the other along and re-record with:
 #   pnpm run verify-translation-pairing --write .agents/notes/implemented/feature/2026-09-22-nebulaseek-brand-overlay.md
-2026-09-22-nebulaseek-brand-overlay.md: 6039cb9e1a9bdba5d38f9bbb20eb85d3b259679a
-2026-09-22-nebulaseek-brand-overlay.zh.md: 7b54afae905ce433b13d16e0060f66936c6592fd
+2026-09-22-nebulaseek-brand-overlay.md: da38d2f2262f98a9a9078da4faccfcc69e60bdda
+2026-09-22-nebulaseek-brand-overlay.zh.md: 5fdc95456863be346e043f0de7e44fe6e0e0b8ee

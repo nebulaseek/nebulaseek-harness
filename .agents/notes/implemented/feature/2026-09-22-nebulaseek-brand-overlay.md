@@ -12,7 +12,7 @@ This distribution must present NebulaSeek branding while continuing to take comm
 
 Keep community code and technical contracts intact. Apply the downstream identity only to shipped user-facing surfaces: the sidebar and conversation hero, browser metadata, desktop application and installer text, icons, the CLI description, onboarding and error copy, and the public repository README.
 
-The English product name is `NebulaSeek（星云寻知） Harness`; Simplified Chinese uses `星云寻知`. The command remains `dsh`, package scopes remain `@deepseek-ai/*`, environment variables remain `DSH_*`, and upstream plugin, storage, protocol, and service identifiers remain unchanged. References to the DeepSeek model or to the community upstream also remain DeepSeek references.
+The application name is `NebulaSeek` in every locale. Project descriptions use `NebulaSeek Harness` and `NebulaSeek Desktop`; “星云寻知” is the Chinese name for explanatory prose, not a suffix in application titles or wordmarks. The command remains `dsh`, package scopes remain `@deepseek-ai/*`, environment variables remain `DSH_*`, and upstream plugin, storage, protocol, and service identifiers remain unchanged. References to the DeepSeek model or to the community upstream also remain DeepSeek references.
 
 Brand assets keep their upstream filenames when the filename is an internal build input. The official brand plugin owns the sidebar and conversation hero marks, so generic UI packages need no downstream changes.
 

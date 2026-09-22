@@ -78,7 +78,7 @@ export function createElectronBuilderConfig(
   return {
     appId,
     extraMetadata: { dshDesktopAppId: appId, dshMandatoryUpdatePolicy: policy },
-    productName: 'NebulaSeek（星云寻知） Harness',
+    productName: 'NebulaSeek',
     artifactName: 'nebulaseek-harness-${version}-${os}-${arch}.${ext}',
     directories: { output: unsigned ? join(buildPaths.root, 'unsigned-artifacts') : buildPaths.artifacts },
     asar: true,

@@ -1,18 +1,30 @@
-# NebulaSeek（星云寻知） Harness
+# NebulaSeek Harness
 
 [English](README.md) | 中文
 
-NebulaSeek（星云寻知） Harness（`dsh`）由维护开源 [DeepSeek Harness 社区版](https://github.com/deepseek-desktop/deepseek-harness) 的同一团队开发，是面向客户的专版。它与社区版保持同一代码基线，专版差异仅限用户可见品牌。
+NebulaSeek Harness（`dsh`）由维护开源 [DeepSeek Harness 社区版](https://github.com/deepseek-desktop/deepseek-harness) 的同一团队开发，是面向客户的专版。它与社区版保持同一代码基线，专版差异仅限用户可见品牌。
 
-社区版面向大众用户，NebulaSeek（星云寻知）专版拥有独立的名称、文案、图片和发行渠道，同时保持相同的运行时契约。
+社区版面向大众用户，NebulaSeek 专版拥有独立的名称、文案、图片和发行渠道，同时保持相同的运行时契约。
 
 它构建于**一切皆插件**的架构之上，由 [Cordis](https://github.com/cordiverse/cordis) 驱动，其设计参见论文 [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512)。
 
 文档：[https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/)
 
+## 版本关系
+
+NebulaSeek 的中文名称为“星云寻知”。Harness 按“官方版 → 社区版 → NebulaSeek”同步，Desktop 按“社区版 → NebulaSeek”同步。
+
+| 版本 | 项目 | 仓库 |
+| --- | --- | --- |
+| 官方版 | DeepSeek Harness | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness.git) |
+| 社区版 | DeepSeek Harness | [deepseek-desktop/deepseek-harness](https://github.com/deepseek-desktop/deepseek-harness.git) |
+| 社区版 | DeepSeek Desktop | [deepseek-desktop/deepseek-desktop](https://github.com/deepseek-desktop/deepseek-desktop.git) |
+| 星云寻知专版 | NebulaSeek Harness | [nebulaseek/nebulaseek-harness](https://github.com/nebulaseek/nebulaseek-harness.git) |
+| 星云寻知专版 | NebulaSeek Desktop | [nebulaseek/nebulaseek-desktop](https://github.com/nebulaseek/nebulaseek-desktop.git) |
+
 ## 开发者预览
 
-NebulaSeek（星云寻知） Harness 处于 _开发者预览_ 阶段，并跟随快速迭代的社区版。**未来将出现破坏兼容性的变更。**
+NebulaSeek Harness 处于 _开发者预览_ 阶段，并跟随快速迭代的社区版。**未来将出现破坏兼容性的变更。**
 
 运行本项目前，请阅读[安全说明](SAFETY.zh.md)。
 

@@ -1,11 +1,11 @@
 {
   "en-US": {
     "menu": [
-      { "label": "About NebulaSeek（星云寻知） Harness", "role": "about" },
+      { "label": "About NebulaSeek", "role": "about" },
       { "type": "separator" }
     ],
     "options": {
-      "applicationName": "NebulaSeek（星云寻知） Harness",
+      "applicationName": "NebulaSeek",
       "applicationVersion": "1.0.0",
       "version": "",
       "copyright": "",
@@ -14,11 +14,11 @@
   },
   "zh-CN": {
     "menu": [
-      { "label": "关于星云寻知", "role": "about" },
+      { "label": "关于 NebulaSeek", "role": "about" },
       { "type": "separator" }
     ],
     "options": {
-      "applicationName": "NebulaSeek（星云寻知） Harness",
+      "applicationName": "NebulaSeek",
       "applicationVersion": "1.0.0",
       "version": "",
       "copyright": "",

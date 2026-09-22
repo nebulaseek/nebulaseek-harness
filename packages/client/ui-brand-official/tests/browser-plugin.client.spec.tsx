@@ -120,7 +120,7 @@ describe('official browser-brand plugin', () => {
 
   it('renders the official name independently from both requested mark sizes', () => {
     const name = render(<OfficialBrandName />)
-    expect(name.container.textContent).toBe('NebulaSeek星云寻知')
+    expect(name.container.textContent).toBe('NebulaSeek')
     name.unmount()
 
     const mark = render(<OfficialBrandMark size={34} />)

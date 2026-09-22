@@ -1,5 +1,5 @@
 - dialog "内测声明":
   - heading "内测声明" [level=2]
-  - paragraph: NebulaSeek（星云寻知） Harness 0.1 是由 DeepSeek Harness 社区版维护团队开发的客户专版。它与社区版运行时保持一致，专版差异仅限用户可见品牌；核心插件与基础 API 将随社区版持续快速演进。
+  - paragraph: NebulaSeek 0.1 是由 DeepSeek Harness 社区版维护团队开发的客户专版。它与社区版运行时保持一致，专版差异仅限用户可见品牌；核心插件与基础 API 将随社区版持续快速演进。
   - paragraph: 我们期待与全球开发者一起，在开源、开放、可复用、可组合的基础设施之上，共同探索智能上限。欢迎全球 Harness 开发者加入 DSH 插件生态。
   - button "继续"
