@@ -47,6 +47,8 @@ When another writer owns the Session, model-selection failures tell the user to 
 <details>
 <summary>Implementation internals — click to expand</summary>
 
+Primary mouse presses explicitly focus menu buttons before selection, including in WebKit, so blur dismissal cannot remove a row before its click arrives. Keyboard navigation and outside-focus dismissal remain available.
+
 Two entries over ONE per-session directory owned by `ModelDirectoryResolver` (`ctx.modelDirectories`): the `/model` popupSelect contribution (registered through `ctx.commandUi`) and the composer's named `conversation.input.model` seat both load the session's advisory directory through `session.models` and submit through `session.selectModel` via the same `ModelDirectory` instance, so a switch made in either entry is what the other shows next. Directory loads and selections share a generation counter so an older response never overwrites a newer one; a connection reset drops every resident projection and repulls the Host-restored selection before display. Directories are per-session, resolved lazily, and disposed with the session scope; addressed subagent sessions expose neither entry. Every resident directory refetches directly on forwarded `llm/adapters-updated` and `settings/document-updated` owner events.
 
 </details>

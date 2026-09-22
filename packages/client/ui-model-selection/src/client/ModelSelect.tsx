@@ -336,7 +336,20 @@ export function ModelSelect(
   }
 
   return (
-    <div ref={rootRef} className={css.root} onKeyDown={onRootKeyDown} onBlur={onBlur}>
+    <div
+      ref={rootRef}
+      className={css.root}
+      onKeyDown={onRootKeyDown}
+      onBlur={onBlur}
+      onMouseDown={(event) => {
+        if (event.button !== 0 || !(event.target instanceof Element)) return
+        const button = event.target.closest('button')
+        if (button === null || button.disabled) return
+        // WebKit does not focus clicked buttons; keep blur inside until click.
+        event.preventDefault()
+        button.focus()
+      }}
+    >
       <button
         ref={triggerRef}
         type="button"

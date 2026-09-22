@@ -207,6 +207,34 @@ describe('ModelSelect reasoning effort', () => {
     expect(screen.queryByRole('button', { name: '重试' })).toBeNull()
   })
 
+  it('keeps a primary pointer selection alive when the browser does not focus clicked buttons', async () => {
+    const select = vi.fn().mockResolvedValue({ ok: true, value: undefined })
+    render(<ModelSelect
+      locked={false}
+      available
+      directory={createSnapshotStore(state())}
+      load={vi.fn()}
+      select={select}
+      t={t}
+    />)
+    fireEvent.click(screen.getByRole('button', { name: /选择模型/ }))
+    fireEvent.click(screen.getByRole('menuitem', { name: /推理等级/ }))
+    const current = screen.getByRole('menuitemradio', { name: 'High' })
+    const target = screen.getByRole('menuitemradio', { name: 'Max' })
+    expect(document.activeElement).toBe(current)
+    // Safari's uncanceled mousedown blurs the checked row to the page body.
+    // The click never reaches a row removed by the resulting menu dismissal.
+    if (fireEvent.mouseDown(target, { button: 0 })) {
+      fireEvent.blur(current, { relatedTarget: null })
+    }
+    if (target.isConnected) fireEvent.click(target)
+    await waitFor(() => {
+      expect(select).toHaveBeenCalledWith({
+        provider: 'deepseek-official', model: 'deepseek-v4-flash', reasoningEffort: 'max',
+      })
+    })
+  })
+
   it('portals the placed menu card to body and closes only on truly-outside mousedown', () => {
     const offsetWidth = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetWidth')!
     const offsetHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetHeight')!
