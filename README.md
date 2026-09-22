@@ -1,16 +1,30 @@
-# DeepSeek Harness
+# NebulaSeek Harness
 
 English | [中文](README.zh.md)
 
-DeepSeek Harness (`dsh`) is an open-source agent harness developed by [DeepSeek AI](https://deepseek.com).
+NebulaSeek Harness (`dsh`) is the dedicated edition built by the team that maintains the open-source [DeepSeek Harness community edition](https://github.com/deepseek-desktop/deepseek-harness). It stays aligned with that community codebase and limits edition-specific changes to user-visible branding.
+
+The community edition serves general users. NebulaSeek is the customer-focused edition, with its own name, copy, imagery, and release channel while retaining the same runtime contracts.
 
 It is built on an **everything-is-a-plugin** architecture and powered by [Cordis](https://github.com/cordiverse/cordis), whose design is described in [_A Programming Paradigm for Spatiotemporal Composability_](https://arxiv.org/abs/2608.25512).
 
 Documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/)
 
+## Project editions
+
+NebulaSeek is also known in Chinese as “星云寻知”. Harness updates flow from the official edition through the community edition to NebulaSeek; Desktop updates flow from the community edition to NebulaSeek.
+
+| Edition | Project | Repository |
+| --- | --- | --- |
+| Official | DeepSeek Harness | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness.git) |
+| Community | DeepSeek Harness | [deepseek-desktop/deepseek-harness](https://github.com/deepseek-desktop/deepseek-harness.git) |
+| Community | DeepSeek Desktop | [deepseek-desktop/deepseek-desktop](https://github.com/deepseek-desktop/deepseek-desktop.git) |
+| 星云寻知 dedicated edition | NebulaSeek Harness | [nebulaseek/nebulaseek-harness](https://github.com/nebulaseek/nebulaseek-harness.git) |
+| 星云寻知 dedicated edition | NebulaSeek Desktop | [nebulaseek/nebulaseek-desktop](https://github.com/nebulaseek/nebulaseek-desktop.git) |
+
 ## Developer preview
 
-DeepSeek Harness is in _developer preview_ and iterating rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
+NebulaSeek Harness is in _developer preview_ and follows an upstream that iterates rapidly. **THERE WILL BE COMPATIBILITY-BREAKING CHANGES.**
 
 Review the [safety notice](SAFETY.md) before running the project.
 
@@ -31,8 +45,8 @@ The command starts the Web UI at `http://127.0.0.1:3080` by default and opens it
 To run from a repository checkout:
 
 ```sh
-git clone https://github.com/deepseek-ai/deepseek-harness.git
-cd deepseek-harness
+git clone https://github.com/nebulaseek/nebulaseek-harness.git
+cd nebulaseek-harness
 pnpm install
 pnpm run build
 pnpm dsh web

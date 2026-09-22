@@ -1,7 +1,7 @@
 {
   "id": "/",
-  "name": "DeepSeek Harness",
-  "short_name": "DSH",
+  "name": "NebulaSeek",
+  "short_name": "NebulaSeek",
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",

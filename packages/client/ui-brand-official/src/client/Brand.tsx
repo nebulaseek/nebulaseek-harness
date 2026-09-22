@@ -1,19 +1,21 @@
-import { BrandWordmark, FishLogo } from '@deepseek-ai/dsh-client-ui-primitives'
+import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
 import type { SidebarBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-sidebar/client'
+import { NebulaSeekBrandMark, NebulaSeekBrandName } from './NebulaSeekBrand.tsx'
 
 /**
  * Render the official mark with the presentation requested by its host surface.
  * @param props - Host-supplied mark presentation.
  * @returns the official whale mark.
  */
-export function OfficialBrandMark({ size }: SidebarBrandMarkOwnerProps) {
-  return <FishLogo size={size} />
+export function OfficialBrandMark({ size, className }: SidebarBrandMarkOwnerProps & { className?: string | undefined }) {
+  return <NebulaSeekBrandMark size={size} className={className} />
 }
 
 /**
  * Render the official name artwork without its independently slotted mark.
- * @returns the official name wordmark.
+ * @param props - The framework-provided brand translation seat.
+ * @returns the localized name wordmark.
  */
-export function OfficialBrandName() {
-  return <BrandWordmark includeMark={false} />
+export function OfficialBrandName({ t }: PropsLocale<'nebulaseekBrand'>) {
+  return <NebulaSeekBrandName name={t('name')} />
 }

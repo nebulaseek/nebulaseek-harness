@@ -62,7 +62,7 @@ it('boots the built plugin graph and renders a fixture session end to end', asyn
   // The sidebar renders from the boot graph: every inject layer activated.
   const tree = await screen.findByRole('tree', { name: 'Sessions' }, { timeout: 10_000 })
   if (clientBuildValue('DSH_CLIENT_BUILD_PROFILE') === 'official') {
-    expect(document.querySelector('svg[viewBox="26 0 156 24"]')).not.toBeNull()
+    expect(screen.getByText('NebulaSeek')).toBeTruthy()
     expect(screen.queryByText('DSH Local Build')).toBeNull()
   } else {
     expect(document.querySelector('svg[viewBox="0 0 23.16 17.04"]')).not.toBeNull()
@@ -173,4 +173,14 @@ it('boots without ui-chat and does not select another conversation view implicit
     expect(document.querySelector('[data-slot="conversation.session"]')).not.toBeNull()
   }, { timeout: 10_000 })
   expect(document.querySelector('[data-slot="conversation.view"]')).toBeNull()
+})
+
+it.skipIf(clientBuildValue('DSH_CLIENT_BUILD_PROFILE') !== 'official').each([
+  ['zh-CN', '星云寻知'],
+  ['en-US', 'NebulaSeek'],
+])('renders the dedicated brand for browser locale %s', async (language, name) => {
+  Object.defineProperty(navigator, 'languages', { value: [language], configurable: true })
+  Object.defineProperty(navigator, 'language', { value: language, configurable: true })
+  mountAssembledApp()
+  expect(await screen.findByText(name, {}, { timeout: 10_000 })).toBeTruthy()
 })
