@@ -1,3 +1,4 @@
+import type { PropsLocale } from '@deepseek-ai/dsh-client-ui-slots'
 import type { SidebarBrandMarkOwnerProps } from '@deepseek-ai/dsh-client-ui-sidebar/client'
 import { NebulaSeekBrandMark, NebulaSeekBrandName } from './NebulaSeekBrand.tsx'
 
@@ -12,8 +13,9 @@ export function OfficialBrandMark({ size, className }: SidebarBrandMarkOwnerProp
 
 /**
  * Render the official name artwork without its independently slotted mark.
- * @returns the official name wordmark.
+ * @param props - The framework-provided brand translation seat.
+ * @returns the localized name wordmark.
  */
-export function OfficialBrandName() {
-  return <NebulaSeekBrandName />
+export function OfficialBrandName({ t }: PropsLocale<'nebulaseekBrand'>) {
+  return <NebulaSeekBrandName name={t('name')} />
 }

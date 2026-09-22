@@ -32,11 +32,14 @@ export function NebulaSeekBrandMark({ size, className }: BrandMarkProps) {
   )
 }
 
-/** Render the NebulaSeek wordmark used by the dedicated edition. */
-export function NebulaSeekBrandName() {
+/**
+ * Render the localized wordmark used by the dedicated edition.
+ * @param props - Localized brand text.
+ */
+export function NebulaSeekBrandName({ name }: { name: string }) {
   return (
     <svg width="96" height="32" viewBox="0 0 96 32" fill="none" aria-hidden="true">
-      <text x="0" y="21" fontSize="14" fontWeight="700" letterSpacing="0.4" fill="currentColor">NebulaSeek</text>
+      <text x="0" y="21" fontSize="14" fontWeight="700" letterSpacing="0.4" fill="currentColor">{name}</text>
     </svg>
   )
 }
